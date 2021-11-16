@@ -1,81 +1,87 @@
-// Reference Type
-class Dog {
-    var wasFed = false
+struct Address {
+    var streetAddress: String
+    var city: String
+    var state: String
+    var postalCode: String
 }
 
-let dog = Dog()
-let puppy = dog
-
-puppy.wasFed = true
-
-dog.wasFed
-puppy.wasFed
-
-// Value Type
-var a = 42
-var b = a
-b += 1
-
-a
-b
-
-struct Cat {
-    var wasFed = false
-}
-
-var cat = Cat()
-var kitty = cat
-kitty.wasFed = true
-
-cat.wasFed
-kitty.wasFed
-
-struct Point: CustomStringConvertible {
-    var x: Float
-    var y: Float
+class Person {              // Reference type
+    var name: String        // Value type
+    var address: Address    // Value type
     
-    var description: String {
-        return "{x: \(x), y: \(y)}"
-        
-        let point1 = Point(x: 2, y: 3)
-        let point2 = Point(x: 2, y: 3)
+    init(name: String, address: Address) {
+        self.name = name
+        self.address = address
     }
 }
 
-extension Point: Equatable { }
-func ==(lhs: Point, rhs: Point) -> Bool {
-return lhs.x == rhs.x && lhs.y == rhs.y
-}
+// 1
+let kingsLanding = Address(
+    streetAddress: "1 King Way",
+    city: "Kings Landing",
+    state: "Westeros",
+    postalCode: "12345")
+let madKing = Person(name: "Aerys", address: kingsLanding)
+let kingSlayer = Person(name: "Jaime", address: kingsLanding)
 
-struct Shape {
-    var center: Point
-}
+// 2
+kingSlayer.address.streetAddress = "1 King Way Apt. 1"
 
-let initialPoint = Point(x: 0, y: 0)
-let circle = Shape(center: initialPoint)
-var square = Shape(center: initialPoint)
+// 3
+madKing.address.streetAddress
+kingSlayer.address.streetAddress
 
-square.center.x = 5
-circle.center
+struct Bill {
+  let amount: Float
+  private var _billedTo: Person
 
-class Account {
-    var balance = 0.0
-}
+  // 1
+  private var billedToForRead: Person {
+    return _billedTo
+  }
 
-class Person {
-    let account: Account
-    
-    init(_ account: Account) {
-        self.account = account
+    private var billedToForWrite: Person {
+      mutating get {
+        if !isKnownUniquelyReferenced(&_billedTo) {
+          print("Making a copy of _billedTo")
+          _billedTo = Person(name: _billedTo.name, address: _billedTo.address)
+        } else {
+          print("Not making a copy of _billedTo")
+        }
+        return _billedTo
+      }
     }
+
+
+
+  init(amount: Float, billedTo: Person) {
+    self.amount = amount
+    _billedTo = Person(name: billedTo.name, address: billedTo.address)
+  }
+
+  // 2
+  mutating func updateBilledToAddress(address: Address) {
+    billedToForWrite.address = address
+  }
+
+  mutating func updateBilledToName(name: String) {
+    billedToForWrite.name = name
+  }
+
+  // ... Methods to read billedToForRead data
 }
 
-let account = Account()
 
-let person1 = Person(account)
-let person2 = Person(account)
+// 1
+let billPayer = Person(name: "Robert", address: kingsLanding)
 
-person2.account.balance += 100.0
+// 2
+let bill = Bill(amount: 42.99, billedTo: billPayer)
+let bill2 = bill
 
-person1.account.balance
-person2.account.balance
+// 3
+billPayer.name = "Bob"
+
+var myBill = Bill(amount: 99.99, billedTo: billPayer)
+var billCopy = myBill
+myBill.updateBilledToName(name: "Eric") // Not making a copy of _billedTo
