@@ -25,11 +25,8 @@ class ViewController: UIViewController {
     
     @IBAction func ButtonLogInPressed(_ sender: UIButton) {
         
-        TextFieldFName.resignFirstResponder()        // Dismiss the keyboard if Log In button pressed from any TextField
-        TextFieldLName.resignFirstResponder()
-        TextFieldEmail.resignFirstResponder()
-        TextFieldMobileNumber.resignFirstResponder()
-        TextFieldPassword.resignFirstResponder()
+        TextFieldFName.resignFirstResponder()        // Dismiss the keyboard if Log In button pressed from all TextField
+        view.endEditing(true)
         
         print(TextFieldFName.text!)                             // Print the TextField value
         print(TextFieldLName.text!)
@@ -45,10 +42,6 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
-        if let text = textField.text {
-            print("\(text)")
-        }
         return true
         
     }
