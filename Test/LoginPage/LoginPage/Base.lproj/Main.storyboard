@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deq-o3-osX" userLabel="Text Field FName">
+                                <rect key="frame" x="111" y="142.5" width="192" height="34"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMX-X5-kud" userLabel="Text F">
+                                <rect key="frame" x="111" y="196.5" width="192" height="34"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-aR-WgW">
+                                <rect key="frame" x="111" y="250.5" width="192" height="34"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eFr-E3-vHk">
+                                <rect key="frame" x="111" y="304.5" width="192" height="34"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEq-iK-Lxv">
+                                <rect key="frame" x="111" y="358.5" width="192" height="34"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTE-fe-P6L">
+                                <rect key="frame" x="175.5" y="406" width="63" height="30"/>
+                                <color key="backgroundColor" red="0.17024227976799011" green="0.59618586301803589" blue="0.74587386846542358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                    <fontDescription key="titleFontDescription" name="Charter-Bold" family="Charter" pointSize="13"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ButtonLogInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGA-Au-lp3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1951904296875" green="0.40517255663871765" blue="0.56299346685409546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FMX-X5-kud" secondAttribute="trailing" constant="111" id="1kj-xs-w2O"/>
+                            <constraint firstItem="deq-o3-osX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="27r-QF-wAI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFr-E3-vHk" secondAttribute="trailing" constant="111" id="A6X-I3-TiT"/>
+                            <constraint firstItem="FMX-X5-kud" firstAttribute="top" secondItem="deq-o3-osX" secondAttribute="bottom" constant="20" id="BQZ-Xf-aJI"/>
+                            <constraint firstItem="deq-o3-osX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98.5" id="G4o-lL-oCW"/>
+                            <constraint firstItem="LTE-fe-P6L" firstAttribute="top" secondItem="WEq-iK-Lxv" secondAttribute="bottom" constant="13.5" id="Gup-qI-BlS"/>
+                            <constraint firstItem="WEq-iK-Lxv" firstAttribute="top" secondItem="eFr-E3-vHk" secondAttribute="bottom" constant="20" id="Iy5-Wp-9MR"/>
+                            <constraint firstItem="JYp-aR-WgW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="M63-bh-Sjp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deq-o3-osX" secondAttribute="trailing" constant="111" id="Njl-ET-qcO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JYp-aR-WgW" secondAttribute="trailing" constant="111" id="g3v-ot-D62"/>
+                            <constraint firstItem="eFr-E3-vHk" firstAttribute="top" secondItem="JYp-aR-WgW" secondAttribute="bottom" constant="20" id="huq-QU-gA5"/>
+                            <constraint firstItem="LTE-fe-P6L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iNl-fV-7dz"/>
+                            <constraint firstItem="WEq-iK-Lxv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="idf-Sk-OHA"/>
+                            <constraint firstItem="JYp-aR-WgW" firstAttribute="top" secondItem="FMX-X5-kud" secondAttribute="bottom" constant="20" id="mpZ-iD-D1w"/>
+                            <constraint firstItem="eFr-E3-vHk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="qCI-pD-UdW"/>
+                            <constraint firstItem="FMX-X5-kud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="xB8-Wz-oaY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WEq-iK-Lxv" secondAttribute="trailing" constant="111" id="yS9-2M-Keu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonLogIn" destination="LTE-fe-P6L" id="F1X-On-ChA"/>
+                        <outlet property="TextFieldEmail" destination="JYp-aR-WgW" id="1O0-mm-sB5"/>
+                        <outlet property="TextFieldFName" destination="deq-o3-osX" id="ynX-KJ-TPF"/>
+                        <outlet property="TextFieldLName" destination="FMX-X5-kud" id="HNi-Tt-fHF"/>
+                        <outlet property="TextFieldMobileNumber" destination="eFr-E3-vHk" id="Dxf-7x-HQe"/>
+                        <outlet property="TextFieldPassword" destination="WEq-iK-Lxv" id="rUt-OB-VTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
