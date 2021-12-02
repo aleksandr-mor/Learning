@@ -14,8 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var TextFieldEmail: UITextField!         // Email
     @IBOutlet weak var TextFieldMobileNumber: UITextField!  // Mobile
     @IBOutlet weak var TextFieldPassword: UITextField!      // Password (secure)
-    
+    @IBOutlet weak var TextView: UITextView!
     @IBOutlet weak var ButtonLogIn: UIButton!               // Log In Button
+    @IBOutlet weak var mySwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,11 @@ class ViewController: UIViewController {
     
     //MARK: - Log In Button Pressed
     
+    @IBAction func mySwitchPressed(_ sender: Any) {
+        TextView.text = ""
+    }
     @IBAction func ButtonLogInPressed(_ sender: UIButton) {
-        
+    
         TextFieldFName.resignFirstResponder()        // Dismiss the keyboard if Log In button pressed from all TextField
         view.endEditing(true)
         
