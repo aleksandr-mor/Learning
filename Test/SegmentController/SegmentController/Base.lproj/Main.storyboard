@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SegmentController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lEv-Qc-ACA">
+                                <rect key="frame" x="89.5" y="64" width="235" height="32"/>
+                                <segments>
+                                    <segment title="Red"/>
+                                    <segment title="Blue"/>
+                                    <segment title="Green"/>
+                                    <segment title="Brown"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mySegmentActions:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cpv-VX-e1i"/>
+                                </connections>
+                            </segmentedControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eEY-Xi-Rec">
+                                <rect key="frame" x="160" y="432" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="psH-m4-HWt"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3s-UG-lEN">
+                                <rect key="frame" x="160" y="359" width="94" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="Hyo-i4-Kpu"/>
+                                    <constraint firstAttribute="height" constant="53" id="zui-pz-P3Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lkX-xk-SuE">
+                                <rect key="frame" x="18" y="614" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eUj-Ae-vCM"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3N-SE-wup">
+                                <rect key="frame" x="160" y="570" width="94" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="lkX-xk-SuE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5vC-Kz-tPH"/>
+                            <constraint firstItem="k3N-SE-wup" firstAttribute="top" secondItem="eEY-Xi-Rec" secondAttribute="bottom" constant="106" id="9ZH-jk-4La"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k3N-SE-wup" secondAttribute="trailing" constant="160" id="Akq-Lo-jIv"/>
+                            <constraint firstItem="eEY-Xi-Rec" firstAttribute="top" secondItem="d3s-UG-lEN" secondAttribute="bottom" constant="20" id="CZn-NT-9Ea"/>
+                            <constraint firstItem="eEY-Xi-Rec" firstAttribute="top" secondItem="d3s-UG-lEN" secondAttribute="bottom" constant="20" id="Hk4-UE-yCo"/>
+                            <constraint firstItem="d3s-UG-lEN" firstAttribute="top" secondItem="lEv-Qc-ACA" secondAttribute="bottom" constant="264" id="IYL-l7-EhM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d3s-UG-lEN" secondAttribute="trailing" constant="160" id="Jjh-DX-gzo"/>
+                            <constraint firstItem="lEv-Qc-ACA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ObK-gg-3BG"/>
+                            <constraint firstItem="d3s-UG-lEN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="STC-zN-FuW"/>
+                            <constraint firstItem="eEY-Xi-Rec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xrt-Ei-6ZW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lkX-xk-SuE" secondAttribute="bottom" constant="218" id="YlH-Rq-eji"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lkX-xk-SuE" secondAttribute="trailing" constant="20" id="dge-Qb-pTM"/>
+                            <constraint firstItem="eEY-Xi-Rec" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hqI-o5-gib"/>
+                            <constraint firstItem="lkX-xk-SuE" firstAttribute="top" secondItem="k3N-SE-wup" secondAttribute="bottom" constant="20" id="sjC-Sn-Z7X"/>
+                            <constraint firstItem="d3s-UG-lEN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uny-Vp-UXD"/>
+                            <constraint firstItem="lEv-Qc-ACA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wbp-Q8-KE0"/>
+                            <constraint firstItem="lkX-xk-SuE" firstAttribute="top" secondItem="k3N-SE-wup" secondAttribute="bottom" constant="20" id="wka-5q-Pwn"/>
+                            <constraint firstItem="k3N-SE-wup" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="y2W-fs-qBv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="d3s-UG-lEN" id="qjR-ll-wnD"/>
+                        <outlet property="mySegment" destination="lEv-Qc-ACA" id="SXW-qs-aUR"/>
+                        <outlet property="mySlider" destination="lkX-xk-SuE" id="aIE-bZ-PxL"/>
+                        <outlet property="mySliderLabel" destination="k3N-SE-wup" id="U12-Cs-jb0"/>
+                        <outlet property="myStepper" destination="eEY-Xi-Rec" id="tUR-lb-eJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
