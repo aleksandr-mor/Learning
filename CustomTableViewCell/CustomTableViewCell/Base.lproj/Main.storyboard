@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTableViewCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s7c-2X-4Ek">
+                                <rect key="frame" x="0.0" y="44" width="428" height="882"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomViewCell" rowHeight="116" id="tfv-Ov-BuZ" customClass="CustomViewCell" customModule="CustomTableViewCell" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tfv-Ov-BuZ" id="XYk-X5-qMG">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="116"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfR-BQ-0eg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="428" height="116"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiderPoster" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-Ez-SkZ">
+                                                            <rect key="frame" x="10" y="10" width="100" height="96"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="0UC-6E-mVF"/>
+                                                                <constraint firstAttribute="width" constant="100" id="jUK-C3-rJ7"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spider-Man: No Way Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4m-m3-T9K">
+                                                            <rect key="frame" x="115" y="47.666666666666664" width="308" height="20.999999999999993"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Hfb-Ez-SkZ" secondAttribute="bottom" constant="10" id="5tA-MD-yS6"/>
+                                                        <constraint firstItem="L4m-m3-T9K" firstAttribute="leading" secondItem="Hfb-Ez-SkZ" secondAttribute="trailing" constant="5" id="A9z-ga-V4o"/>
+                                                        <constraint firstItem="Hfb-Ez-SkZ" firstAttribute="leading" secondItem="UfR-BQ-0eg" secondAttribute="leading" constant="10" id="Mjo-Lg-Uqa"/>
+                                                        <constraint firstItem="L4m-m3-T9K" firstAttribute="centerY" secondItem="Hfb-Ez-SkZ" secondAttribute="centerY" id="USV-ua-BFQ"/>
+                                                        <constraint firstItem="Hfb-Ez-SkZ" firstAttribute="top" secondItem="UfR-BQ-0eg" secondAttribute="top" constant="10" id="bkm-fb-ipv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="L4m-m3-T9K" secondAttribute="trailing" constant="5" id="hPK-6L-cm2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UfR-BQ-0eg" firstAttribute="top" secondItem="XYk-X5-qMG" secondAttribute="top" id="3Yh-iU-cYW"/>
+                                                <constraint firstAttribute="bottom" secondItem="UfR-BQ-0eg" secondAttribute="bottom" id="NMs-HF-iJi"/>
+                                                <constraint firstAttribute="trailing" secondItem="UfR-BQ-0eg" secondAttribute="trailing" id="Qpp-Xv-5Yx"/>
+                                                <constraint firstItem="UfR-BQ-0eg" firstAttribute="leading" secondItem="XYk-X5-qMG" secondAttribute="leading" id="ccD-yB-oyd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewMoviePoster" destination="Hfb-Ez-SkZ" id="6Lt-t3-QEs"/>
+                                            <outlet property="lableMovieTitle" destination="L4m-m3-T9K" id="Jk8-Dt-tSG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s7c-2X-4Ek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BHE-yv-tl0"/>
+                            <constraint firstItem="s7c-2X-4Ek" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FlW-kd-Od1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s7c-2X-4Ek" secondAttribute="trailing" id="QtW-mq-DKp"/>
+                            <constraint firstAttribute="bottom" secondItem="s7c-2X-4Ek" secondAttribute="bottom" id="c9A-H4-LyW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="s7c-2X-4Ek" id="Wb5-Eh-4vJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.22429906542056" y="83.585313174946009"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spiderPoster" width="1000" height="1482"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
