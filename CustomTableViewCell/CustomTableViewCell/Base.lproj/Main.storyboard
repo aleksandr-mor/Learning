@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,6 +41,41 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spider-Man: No Way Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4m-m3-T9K">
                                                             <rect key="frame" x="115" y="47.666666666666664" width="308" height="20.999999999999993"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="AccentColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4W-qf-cnL">
+                                                            <rect key="frame" x="115.00000000000001" y="75.666666666666671" width="33.666666666666671" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•‎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnG-w5-EWx">
+                                                            <rect key="frame" x="153.66666666666666" y="75.666666666666671" width="8" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fantasy, action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f1-2T-ZrK">
+                                                            <rect key="frame" x="166.66666666666666" y="75.666666666666671" width="110.33333333333334" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="2Gd-Wm-UHy">
+                                                            <rect key="frame" x="363" y="48" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="evd-r9-kZ7"/>
+                                                                <constraint firstAttribute="width" constant="20" id="orC-uf-vTC"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M6-YY-dDw">
+                                                            <rect key="frame" x="383" y="49" width="24" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="t2s-GE-dAg"/>
+                                                                <constraint firstAttribute="height" constant="18" id="ubf-DT-ZYR"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -47,11 +83,21 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="Hfb-Ez-SkZ" secondAttribute="bottom" constant="10" id="5tA-MD-yS6"/>
+                                                        <constraint firstItem="4M6-YY-dDw" firstAttribute="leading" secondItem="2Gd-Wm-UHy" secondAttribute="trailing" id="641-hf-QA1"/>
                                                         <constraint firstItem="L4m-m3-T9K" firstAttribute="leading" secondItem="Hfb-Ez-SkZ" secondAttribute="trailing" constant="5" id="A9z-ga-V4o"/>
                                                         <constraint firstItem="Hfb-Ez-SkZ" firstAttribute="leading" secondItem="UfR-BQ-0eg" secondAttribute="leading" constant="10" id="Mjo-Lg-Uqa"/>
                                                         <constraint firstItem="L4m-m3-T9K" firstAttribute="centerY" secondItem="Hfb-Ez-SkZ" secondAttribute="centerY" id="USV-ua-BFQ"/>
+                                                        <constraint firstItem="qnG-w5-EWx" firstAttribute="centerY" secondItem="A4W-qf-cnL" secondAttribute="centerY" id="UkY-LU-Lmg"/>
+                                                        <constraint firstItem="A4W-qf-cnL" firstAttribute="top" secondItem="L4m-m3-T9K" secondAttribute="bottom" constant="7.3300000000000001" id="VFx-r0-cQM"/>
+                                                        <constraint firstItem="6f1-2T-ZrK" firstAttribute="leading" secondItem="qnG-w5-EWx" secondAttribute="trailing" constant="5" id="Wat-dC-VY3"/>
                                                         <constraint firstItem="Hfb-Ez-SkZ" firstAttribute="top" secondItem="UfR-BQ-0eg" secondAttribute="top" constant="10" id="bkm-fb-ipv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2Gd-Wm-UHy" secondAttribute="trailing" constant="45" id="dVl-ws-Ei1"/>
                                                         <constraint firstAttribute="trailing" secondItem="L4m-m3-T9K" secondAttribute="trailing" constant="5" id="hPK-6L-cm2"/>
+                                                        <constraint firstItem="qnG-w5-EWx" firstAttribute="leading" secondItem="A4W-qf-cnL" secondAttribute="trailing" constant="5" id="jOh-Ek-lWx"/>
+                                                        <constraint firstItem="A4W-qf-cnL" firstAttribute="leading" secondItem="Hfb-Ez-SkZ" secondAttribute="trailing" constant="5" id="jjA-lN-eLv"/>
+                                                        <constraint firstItem="2Gd-Wm-UHy" firstAttribute="centerY" secondItem="L4m-m3-T9K" secondAttribute="centerY" id="kcJ-cc-y1F"/>
+                                                        <constraint firstItem="6f1-2T-ZrK" firstAttribute="centerY" secondItem="qnG-w5-EWx" secondAttribute="centerY" id="oz9-92-S8Z"/>
+                                                        <constraint firstItem="4M6-YY-dDw" firstAttribute="centerY" secondItem="2Gd-Wm-UHy" secondAttribute="centerY" id="wlZ-qr-mwS"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -90,6 +136,10 @@
     </scenes>
     <resources>
         <image name="spiderPoster" width="1000" height="1482"/>
+        <image name="star" width="757" height="720"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
