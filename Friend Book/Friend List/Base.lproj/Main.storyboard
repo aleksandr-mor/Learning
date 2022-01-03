@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aeG-PX-2mQ">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend Book-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Friend_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-th-Yra">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="804"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6T-85-Sba" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Elon-Musk" translatesAutoresizingMaskIntoConstraints="NO" id="B2g-RV-tE6">
+                                                <rect key="frame" x="139" y="50" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="Fnp-nO-g7S"/>
+                                                    <constraint firstAttribute="height" constant="150" id="ttz-R0-MGK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtE-h8-yDv">
+                                                <rect key="frame" x="249" y="50" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="i9f-DD-iql"/>
+                                                    <constraint firstAttribute="width" constant="40" id="kHy-W5-B6k"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="muh-4k-aab"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title="">
+                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-4s-lFP">
+                                                <rect key="frame" x="50" y="230" width="328" height="17.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nT4-vA-1wO">
+                                                <rect key="frame" x="50" y="257.33333333333331" width="328" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8j-S9-gCF">
+                                                <rect key="frame" x="50" y="311.33333333333331" width="328" height="17.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8vp-zX-MeE">
+                                                <rect key="frame" x="50" y="338.66666666666669" width="328" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCP-5f-rTZ">
+                                                <rect key="frame" x="50" y="392.66666666666669" width="328" height="18"/>
+                                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXr-5c-4Ih">
+                                                <rect key="frame" x="50" y="420.66666666666669" width="328" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ex-Sa-4XH">
+                                                <rect key="frame" x="50" y="474.66666666666663" width="328" height="18"/>
+                                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wg9-bd-Rlv">
+                                                <rect key="frame" x="50" y="502.66666666666663" width="328" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENd-Gf-bU8">
+                                                <rect key="frame" x="50" y="556.66666666666663" width="328" height="18"/>
+                                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxf-zl-3fu">
+                                                <rect key="frame" x="50" y="584.66666666666663" width="328" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY2-Jq-Yv2">
+                                                <rect key="frame" x="50" y="638.66666666666663" width="328" height="17.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Yb-an-sZo">
+                                                <rect key="frame" x="50" y="666" width="328" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6O-3L-Y2H">
+                                                <rect key="frame" x="50" y="745" width="328" height="31.333333333333371"/>
+                                                <color key="backgroundColor" red="0.37834501266479492" green="0.47345364093780518" blue="0.93408411741256714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Save ">
+                                                    <fontDescription key="titleFontDescription" name="Charter-Bold" family="Charter" pointSize="14"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="TCP-5f-rTZ" firstAttribute="top" secondItem="8vp-zX-MeE" secondAttribute="bottom" constant="20" id="0XR-z0-3xE"/>
+                                            <constraint firstItem="Wg9-bd-Rlv" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="2qB-9S-jsO"/>
+                                            <constraint firstAttribute="trailing" secondItem="G8j-S9-gCF" secondAttribute="trailing" constant="50" id="DiT-we-jwD"/>
+                                            <constraint firstAttribute="trailing" secondItem="SY2-Jq-Yv2" secondAttribute="trailing" constant="50" id="DnK-Js-htW"/>
+                                            <constraint firstItem="i6O-3L-Y2H" firstAttribute="top" secondItem="5Yb-an-sZo" secondAttribute="bottom" constant="45" id="EAE-Tf-Y6c"/>
+                                            <constraint firstItem="ENd-Gf-bU8" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="Gkr-mb-OCq"/>
+                                            <constraint firstItem="5Yb-an-sZo" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="JT2-Vd-GRE"/>
+                                            <constraint firstAttribute="trailing" secondItem="i6O-3L-Y2H" secondAttribute="trailing" constant="50" id="K3q-WR-2uD"/>
+                                            <constraint firstItem="nT4-vA-1wO" firstAttribute="top" secondItem="e7d-4s-lFP" secondAttribute="bottom" constant="10" id="Nn6-QN-xFu"/>
+                                            <constraint firstItem="SY2-Jq-Yv2" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="OgC-IX-6Rb"/>
+                                            <constraint firstItem="5Ex-Sa-4XH" firstAttribute="top" secondItem="LXr-5c-4Ih" secondAttribute="bottom" constant="20" id="P4v-3v-CFL"/>
+                                            <constraint firstItem="mtE-h8-yDv" firstAttribute="leading" secondItem="B2g-RV-tE6" secondAttribute="trailing" constant="-40" id="PKe-BL-IBZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="B2g-RV-tE6" secondAttribute="bottom" constant="1000" id="QDo-vd-OGR"/>
+                                            <constraint firstItem="e7d-4s-lFP" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="QwT-hI-mEH"/>
+                                            <constraint firstItem="LXr-5c-4Ih" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="Rbu-uB-kRg"/>
+                                            <constraint firstItem="G8j-S9-gCF" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="TTv-w3-zz5"/>
+                                            <constraint firstItem="G8j-S9-gCF" firstAttribute="top" secondItem="nT4-vA-1wO" secondAttribute="bottom" constant="20" id="The-5d-zIQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="TCP-5f-rTZ" secondAttribute="trailing" constant="50" id="Uv0-1Z-ThI"/>
+                                            <constraint firstItem="fxf-zl-3fu" firstAttribute="top" secondItem="ENd-Gf-bU8" secondAttribute="bottom" constant="10" id="VdC-0A-ZWH"/>
+                                            <constraint firstItem="B2g-RV-tE6" firstAttribute="centerX" secondItem="x6T-85-Sba" secondAttribute="centerX" id="WWx-zh-uW4"/>
+                                            <constraint firstAttribute="trailing" secondItem="LXr-5c-4Ih" secondAttribute="trailing" constant="50" id="Xo9-RI-NrP"/>
+                                            <constraint firstItem="SY2-Jq-Yv2" firstAttribute="top" secondItem="fxf-zl-3fu" secondAttribute="bottom" constant="20" id="a7b-uP-cmw"/>
+                                            <constraint firstItem="mtE-h8-yDv" firstAttribute="top" secondItem="B2g-RV-tE6" secondAttribute="top" id="bmF-Um-7Xa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wg9-bd-Rlv" secondAttribute="trailing" constant="50" id="e41-u1-4X1"/>
+                                            <constraint firstAttribute="trailing" secondItem="8vp-zX-MeE" secondAttribute="trailing" constant="50" id="f8F-q3-70J"/>
+                                            <constraint firstItem="fxf-zl-3fu" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="fzw-yn-ALh"/>
+                                            <constraint firstAttribute="trailing" secondItem="e7d-4s-lFP" secondAttribute="trailing" constant="50" id="gEW-pW-0Od"/>
+                                            <constraint firstAttribute="trailing" secondItem="fxf-zl-3fu" secondAttribute="trailing" constant="50" id="gmd-G6-DfC"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Ex-Sa-4XH" secondAttribute="trailing" constant="50" id="iQQ-f7-mkj"/>
+                                            <constraint firstItem="5Ex-Sa-4XH" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="lTg-Jt-btQ"/>
+                                            <constraint firstItem="8vp-zX-MeE" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="mCM-LA-K2c"/>
+                                            <constraint firstAttribute="trailing" secondItem="nT4-vA-1wO" secondAttribute="trailing" constant="50" id="nc9-Ry-qhz"/>
+                                            <constraint firstItem="nT4-vA-1wO" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="qON-fn-Y6J"/>
+                                            <constraint firstItem="B2g-RV-tE6" firstAttribute="top" secondItem="x6T-85-Sba" secondAttribute="top" constant="50" id="qgX-Mo-dYl"/>
+                                            <constraint firstItem="5Yb-an-sZo" firstAttribute="top" secondItem="SY2-Jq-Yv2" secondAttribute="bottom" constant="10" id="rbr-aa-tnK"/>
+                                            <constraint firstItem="e7d-4s-lFP" firstAttribute="top" secondItem="B2g-RV-tE6" secondAttribute="bottom" constant="30" id="rom-Mo-xKI"/>
+                                            <constraint firstAttribute="trailing" secondItem="ENd-Gf-bU8" secondAttribute="trailing" constant="50" id="uWY-H1-otP"/>
+                                            <constraint firstItem="i6O-3L-Y2H" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="vS8-fB-10e"/>
+                                            <constraint firstItem="TCP-5f-rTZ" firstAttribute="leading" secondItem="x6T-85-Sba" secondAttribute="leading" constant="50" id="wCU-BN-Wu7"/>
+                                            <constraint firstItem="LXr-5c-4Ih" firstAttribute="top" secondItem="TCP-5f-rTZ" secondAttribute="bottom" constant="10" id="xLZ-1d-KUr"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Yb-an-sZo" secondAttribute="trailing" constant="50" id="yhZ-Is-2bT"/>
+                                            <constraint firstItem="Wg9-bd-Rlv" firstAttribute="top" secondItem="5Ex-Sa-4XH" secondAttribute="bottom" constant="10" id="yij-8L-gtm"/>
+                                            <constraint firstItem="8vp-zX-MeE" firstAttribute="top" secondItem="G8j-S9-gCF" secondAttribute="bottom" constant="10" id="ypZ-PE-sun"/>
+                                            <constraint firstItem="ENd-Gf-bU8" firstAttribute="top" secondItem="Wg9-bd-Rlv" secondAttribute="bottom" constant="20" id="ytc-8q-dYs"/>
+                                            <constraint firstItem="B2g-RV-tE6" firstAttribute="centerX" secondItem="x6T-85-Sba" secondAttribute="centerX" id="z72-hs-IUn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x6T-85-Sba" firstAttribute="leading" secondItem="Opp-tl-ZbY" secondAttribute="leading" id="Ph2-ro-llF"/>
+                                    <constraint firstItem="x6T-85-Sba" firstAttribute="bottom" secondItem="Opp-tl-ZbY" secondAttribute="bottom" id="Qok-qZ-ibQ"/>
+                                    <constraint firstItem="x6T-85-Sba" firstAttribute="top" secondItem="Opp-tl-ZbY" secondAttribute="top" id="krZ-y6-SvA"/>
+                                    <constraint firstItem="x6T-85-Sba" firstAttribute="trailing" secondItem="Opp-tl-ZbY" secondAttribute="trailing" id="li4-Jz-9eS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Opp-tl-ZbY"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="LrF-wi-ozX"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GGy-th-Yra" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ARd-Cz-3Ip"/>
+                            <constraint firstItem="x6T-85-Sba" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Dro-s4-quQ"/>
+                            <constraint firstItem="GGy-th-Yra" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YnM-8d-XBs"/>
+                            <constraint firstItem="GGy-th-Yra" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mUL-al-itE"/>
+                            <constraint firstItem="GGy-th-Yra" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oXv-MK-wBC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friend Book" id="K0g-Eu-HGI"/>
+                    <connections>
+                        <outlet property="addButton" destination="mtE-h8-yDv" id="z6i-Q6-dPg"/>
+                        <outlet property="image" destination="B2g-RV-tE6" id="JLC-E5-2O6"/>
+                        <outlet property="saveButton" destination="i6O-3L-Y2H" id="hun-Ha-v1u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="buk-T4-tPx">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="aeG-PX-2mQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" translucent="NO" id="VIT-Ce-7Y2">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.37834501266479492" green="0.47345364093780518" blue="0.93408411741256714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.37834501266479492" green="0.47345364093780518" blue="0.93408411741256714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="0.0"/>
+                            <color key="textColor" red="0.37834501266479492" green="0.47345364093780518" blue="0.93408411741256714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.37834501266479492" green="0.47345364093780518" blue="0.93408411741256714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V5Y-dQ-6tX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <toolbarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </toolbarAppearance>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="A54-O9-Px8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAz-PI-voq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Elon-Musk" width="1200" height="800"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
