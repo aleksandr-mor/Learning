@@ -42,6 +42,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title="">
                                                     <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cameraButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjC-jf-5Cf"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-4s-lFP">
                                                 <rect key="frame" x="50" y="230" width="328" height="17.333333333333343"/>
