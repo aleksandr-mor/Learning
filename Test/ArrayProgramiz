@@ -1,0 +1,67 @@
+import UIKit
+
+var capitalCity = ["Nepal": "Kathmandu", "Italy": "Rome", "England": "London"]
+print(capitalCity)
+
+ dictionary with keys and values of different data types
+var numbers = [1: "One", 2: "Two", 3: "Three"]
+print(numbers)
+
+var capitalCity = ["Nepal": "Kathmandu", "Italy": "Rome", "England": "London"]
+print("Initial dictionary: ", capitalCity)
+
+capitalCity["Japan"] = "Tokyo"
+
+print("Updated dictionary: ", capitalCity)
+print(capitalCity["Japan"])
+
+var studentID = [111: "Eric", 112: "Kyle", 113: "Butters"]
+print("Initial dictionary: ", studentID)
+
+studentID[112] = "Stan"
+
+print("Updated dictionary: ", studentID)
+
+
+var cities = ["Nepal": "Kathmandu", "China": "Beijing", "Japan": "Tokyo"]
+
+print("Dictionary: ", cities)
+
+// cities.keys return all keys of cities
+var countryName = Array(cities.keys)
+
+print("Keys: ", countryName)
+
+
+var cities = ["Nepal": "Kathmandu", "China": "Beijing", "Japan": "Tokyo"]
+
+print("Dictionary: ", cities)
+
+//cities.values return all values of cities
+var countryName = Array(cities.values)
+
+print("Values: ", countryName)
+
+
+var studentID = [111: "Eric", 112: "Kyle", 113: "Butters"]
+
+print("Initial Dictionary: ", studentID)
+
+var removedValue = studentID.removeValue(forKey: 112)
+
+print("Dictionary After removeValue(): ", studentID)
+
+
+var classification = ["Fruit": "Apple", "Vegetable": "Broccoli", "Beverage": "Milk"]
+
+print("Keys: Values")
+
+for (key, value) in classification {
+    print("\(key): \(value)")
+}
+
+var studentID = [111: "Eric", 112: "Kyle", 113: "Butters"]
+print(studentID.count)
+
+var emptyDictionary = [Int: String]()
+print("Empty dictionary: ", emptyDictionary)
