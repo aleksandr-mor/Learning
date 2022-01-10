@@ -7,11 +7,11 @@
 
 import UIKit
 
+
 class ViewController: UIViewController  {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
     
     var dataArray = [String]()
     
@@ -20,29 +20,25 @@ class ViewController: UIViewController  {
         tableView.dataSource = self
         tableView.delegate = self
         print(dataArray.count)
+        
     }
 
     @IBAction func addButtonAction(_ sender: UIBarButtonItem) {
         
-        if  textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).count == 0 {
+        guard let enteredText = textField.text else {return}
+        
+        if  enteredText.trimmingCharacters(in: .whitespacesAndNewlines).count == 0 {
             // textField is empty
+            self.showAlert(title: "Alert", message: "Please enter some text!!")
             
-            let alert = UIAlertController(title: "alert", message: "Enter some data", preferredStyle: UIAlertController.Style.alert)
-
-                  // add an action (button)
-                  alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                  // show the alert
-                  self.present(alert, animated: true, completion: nil)
+        } else if dataArray.contains(enteredText) {
+            self.showAlert(title: "Alert", message: "Duplicated")
+            textField.text = ""
         }
-        
-      //  dataArray.contains(<#T##element: String##String#>)
-        
-        
-        
+       
         else {
             
-            dataArray.append(textField.text ?? "")
+            dataArray.append(enteredText)
             print(dataArray.count)
             tableView.reloadData()
             textField.text = nil
@@ -52,7 +48,7 @@ class ViewController: UIViewController  {
       
        
     }
-    
+   
 }
 
 extension ViewController : UITableViewDataSource {
@@ -62,17 +58,20 @@ extension ViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = dataArray[indexPath.row]
-       
-        
          return cell
     }
-    
-    
 }
 
 extension ViewController : UITableViewDelegate {
     
+}
+
+extension UIViewController  {
+    func showAlert( title : String , message : String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
