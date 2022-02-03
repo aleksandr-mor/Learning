@@ -95,6 +95,5 @@ class NotificationSettingView: UIView {
         imageView.frame = CGRect(x: (bounds.size.width - imageSize)/2, y: 30, width: imageSize, height: imageSize)
         label.frame = CGRect(x: 10, y: 30+imageSize+20, width: frame.size.width-20, height: 100)
         button.frame = CGRect(x: 40, y: 160+imageSize, width: frame.size.width-80, height: 50)
-        
     }
 }
