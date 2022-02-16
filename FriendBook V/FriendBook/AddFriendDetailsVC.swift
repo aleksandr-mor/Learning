@@ -8,7 +8,8 @@
 import UIKit
 
 protocol AddFriendDetailsDelegate {
-    func didAddedFriendDetails(with details : [String : String])
+    func didAddedFriendDetails(with details : FriendsModel)
+//    func didTapOnBackButton()
 }
 
 
@@ -27,6 +28,9 @@ class AddFriendDetailsVC: UIViewController {
         super.viewDidLoad()
         buttonAdd.layer.cornerRadius = buttonAdd.frame.height / 2
         buttonAdd.layer.masksToBounds = true
+        
+        UserDefaults.standard.set("Vishal", forKey: "name")
+        
     }
     
     //MARK:- IBAction
@@ -34,8 +38,8 @@ class AddFriendDetailsVC: UIViewController {
         
         if validate() {
             guard let firstName =  textFieldFirstName.text , let lastName = textFieldLastName.text  else {return}
-            let detailsDic = ["firstName" : firstName.capitalized , "lastName" : lastName.capitalized]
-            delegate?.didAddedFriendDetails(with: detailsDic)
+           // let detailsDic = ["firstName" : firstName.capitalized , "lastName" : lastName.capitalized]
+            delegate?.didAddedFriendDetails(with: FriendsModel(firstName: firstName, lastName: lastName))
             self.navigationController?.popViewController(animated: true)
         }
         

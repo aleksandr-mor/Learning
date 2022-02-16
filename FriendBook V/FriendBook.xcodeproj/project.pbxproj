@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		479B2B9A27BD83920013353A /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B2B9927BD83920013353A /* FriendsModel.swift */; };
 		6E3F260127A3075A003A33BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F260027A3075A003A33BC /* AppDelegate.swift */; };
 		6E3F260327A3075A003A33BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F260227A3075A003A33BC /* SceneDelegate.swift */; };
 		6E3F260527A3075A003A33BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F260427A3075A003A33BC /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		479B2B9927BD83920013353A /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		6E3F25FD27A3075A003A33BC /* FriendBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3F260027A3075A003A33BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E3F260227A3075A003A33BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				6E3F260227A3075A003A33BC /* SceneDelegate.swift */,
 				6E3F260427A3075A003A33BC /* ViewController.swift */,
 				6E3F261427A3084C003A33BC /* AddFriendDetailsVC.swift */,
+				479B2B9927BD83920013353A /* FriendsModel.swift */,
 				6E3F260627A3075A003A33BC /* Main.storyboard */,
 				6E3F260927A3075B003A33BC /* Assets.xcassets */,
 				6E3F260B27A3075B003A33BC /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				6E3F260127A3075A003A33BC /* AppDelegate.swift in Sources */,
 				6E3F260327A3075A003A33BC /* SceneDelegate.swift in Sources */,
 				6E3F261527A3084C003A33BC /* AddFriendDetailsVC.swift in Sources */,
+				479B2B9A27BD83920013353A /* FriendsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

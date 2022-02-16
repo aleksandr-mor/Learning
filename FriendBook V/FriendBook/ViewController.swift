@@ -13,19 +13,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK:- Properties
-    var friendDataArray = [[String : String]]()
+    var friendDataArray = [FriendsModel]()
+    
     
     //MARK:- lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let name = UserDefaults.standard.value(forKey: "name") as? String {
+            print("name is \(name)")
+        }
     }
 
     //MARK:- IBAction
     @IBAction func addButtonAction(_ sender: UIBarButtonItem) {
         if  let addFriendDetailsVC = self.storyboard?.instantiateViewController(identifier: "AddFriendDetailsVC") as? AddFriendDetailsVC {
-            addFriendDetailsVC.delegate = self
+           addFriendDetailsVC.delegate = self
             self.navigationController?.pushViewController(addFriendDetailsVC, animated: true)
         }
     }
@@ -41,8 +51,8 @@ extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let details = friendDataArray[indexPath.row] // from here we will get single dic from array of dic
-        cell.textLabel?.text = details["firstName"]
-        cell.detailTextLabel?.text = details["lastName"]
+        cell.textLabel?.text = details.firstName
+        cell.detailTextLabel?.text = details.lastName
         return cell
     }
 }
@@ -55,7 +65,7 @@ extension ViewController : UITableViewDelegate {
 extension ViewController : AddFriendDetailsDelegate {
     
     // from here we are adding data of friend
-    func didAddedFriendDetails(with details: [String : String]) {
+    func didAddedFriendDetails(with details: FriendsModel) {
         friendDataArray.append(details)
         tableView.reloadData()
     }
