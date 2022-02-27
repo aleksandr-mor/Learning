@@ -227,6 +227,14 @@ extension SearchViewController: TrackCellDelegate {
 
 extension SearchViewController: URLSessionDownloadDelegate {
   func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-    print("Finished downloading to \(location).")
+    // 1
+    guard let sourceURL = downloadTask.originalRequest?.url else {
+      return
+    }
+    
+    let download = downloadService.activeDownloads[sourceURL]
+    downloadService.activeDownloads[sourceURL] = nil
+    // 2
+    
   }
 }
