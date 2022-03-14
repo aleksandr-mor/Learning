@@ -16,7 +16,24 @@ class ViewController: UIViewController {
         myView.backgroundColor = .red
         myView.center = view.center
         view.addSubview(myView)
+        
+        // Long Press gesture recognizer
+        
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(gestureFire(_:)))
+        
+        // Pan gesture recognizer
+        
+//        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(gestureFire(_:)))
+//
+        
+        // Swipe gesture recognizer
+        
+//        let gestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gestureFire(_:)))
+//        gestureRecognizer.direction = .right
+//        gestureRecognizer.numberOfTouchesRequired = 1
+        
         // Tap gesture recognizer
+        
 //        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(gestureFire(_:)))
 //        gestureRecognizer.numberOfTapsRequired = 2
 //        gestureRecognizer.numberOfTouchesRequired = 1
@@ -25,7 +42,7 @@ class ViewController: UIViewController {
         myView.isUserInteractionEnabled = true
     }
     
-   @objc func gestureFire(_ gesture: UITapGestureRecognizer) {
+   @objc func gestureFire(_ gesture: UILongPressGestureRecognizer) {
         print("gesture fired")
     }
 
