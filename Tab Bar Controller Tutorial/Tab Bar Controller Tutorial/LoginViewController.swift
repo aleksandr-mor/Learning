@@ -9,6 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    enum Tabs: Int {
+        case Dashboard
+        case Middle
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -16,7 +21,11 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginTapped(_ sender: Any) {
         
-        // TODO: Here, perform login with tab controller
+        let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+        
+        mainTabController.selectedViewController = mainTabController.viewControllers?[1]
+        
+        present(mainTabController, animated: true, completion: nil)
     }
     
 }

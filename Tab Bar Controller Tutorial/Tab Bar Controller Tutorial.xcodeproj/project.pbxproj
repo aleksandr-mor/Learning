@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47A9B52F27F6401C002798B7 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9B52E27F6401C002798B7 /* MainTabController.swift */; };
+		47A9B53127F648D1002798B7 /* FirstViewontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9B53027F648D1002798B7 /* FirstViewontroller.swift */; };
 		47B7557127F63C45002D8640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B7557027F63C45002D8640 /* AppDelegate.swift */; };
 		47B7557327F63C45002D8640 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B7557227F63C45002D8640 /* SceneDelegate.swift */; };
 		47B7557527F63C45002D8640 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B7557427F63C45002D8640 /* LoginViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		47A9B52E27F6401C002798B7 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		47A9B53027F648D1002798B7 /* FirstViewontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewontroller.swift; sourceTree = "<group>"; };
 		47B7556D27F63C45002D8640 /* Tab Bar Controller Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Bar Controller Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B7557027F63C45002D8640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B7557227F63C45002D8640 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				47B7557227F63C45002D8640 /* SceneDelegate.swift */,
 				47B7557427F63C45002D8640 /* LoginViewController.swift */,
 				47A9B52E27F6401C002798B7 /* MainTabController.swift */,
+				47A9B53027F648D1002798B7 /* FirstViewontroller.swift */,
 				47B7557627F63C45002D8640 /* Main.storyboard */,
 				47B7557927F63C48002D8640 /* Assets.xcassets */,
 				47B7557B27F63C48002D8640 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				47B7557527F63C45002D8640 /* LoginViewController.swift in Sources */,
 				47B7557127F63C45002D8640 /* AppDelegate.swift in Sources */,
+				47A9B53127F648D1002798B7 /* FirstViewontroller.swift in Sources */,
 				47A9B52F27F6401C002798B7 /* MainTabController.swift in Sources */,
 				47B7557327F63C45002D8640 /* SceneDelegate.swift in Sources */,
 			);

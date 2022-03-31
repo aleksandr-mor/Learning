@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="139" y="139"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="JUn-cb-7Ne">
             <objects>
                 <viewController id="pl4-bv-KhO" sceneMemberID="viewController">
@@ -47,13 +47,13 @@
                         <viewLayoutGuide key="safeArea" id="6Sg-zq-fnB"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yG1-C6-aeM"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="yG1-C6-aeM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjO-RE-0Ks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1719" y="1185"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="0gA-cH-tdK">
             <objects>
                 <viewController id="uiY-xm-gU7" sceneMemberID="viewController">
@@ -63,17 +63,17 @@
                         <viewLayoutGuide key="safeArea" id="TAk-iO-R3m"/>
                         <color key="backgroundColor" red="0.144404" green="0.56529499999999999" blue="0.55464599999999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="RHS-h6-AUg"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="RHS-h6-AUg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivm-ZJ-wK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1719" y="479"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="hCd-tB-y0b">
             <objects>
-                <viewController id="rAM-ER-qwp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QSv-eO-CpV">
+                <viewController storyboardIdentifier="FirstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rAM-ER-qwp" customClass="FirstViewController" customModule="Tab_Bar_Controller_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="FirstViewController" id="QSv-eO-CpV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -90,7 +90,13 @@
                         <viewLayoutGuide key="safeArea" id="gzw-TE-764"/>
                         <color key="backgroundColor" red="0.82246291039999997" green="0.15881980479999999" blue="0.38117843979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aSU-F5-Cjs"/>
+                    <navigationItem key="navigationItem" id="aSU-F5-Cjs">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="TqH-9J-gmm">
+                            <connections>
+                                <action selector="logout:" destination="rAM-ER-qwp" id="Uvw-ru-GGn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZk-Yz-5KK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="3484" y="-164"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Controller-->
         <scene sceneID="Mni-bs-dhP">
             <objects>
-                <tabBarController id="Ksa-kB-fNm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ksa-kB-fNm" customClass="MainTabController" customModule="Tab_Bar_Controller_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jFs-3f-v2P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -131,11 +137,11 @@
             </objects>
             <point key="canvasLocation" x="828" y="139"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="wcE-LH-1ap">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAE-fM-nEQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="KQb-vw-aT0"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="KQb-vw-aT0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d0R-kg-4VP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
