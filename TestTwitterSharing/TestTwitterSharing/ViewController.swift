@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func twitterButtonPressed(_ sender: Any) {
-        let activityController = UIActivityViewController(activityItems: ["I got 1/20 in Swifty Quiz! Check it up!\nhttps://apps.apple.com/ru/app/splito/id1602086746?l=en"], applicationActivities: nil)
+        let activityController = UIActivityViewController(activityItems: ["I got 1/20 in Qwifty! Check it up!\nhttps://apps.apple.com/ru/app/qwifty/id1626605129"], applicationActivities: nil)
             present(activityController, animated: true, completion: nil)
         }
     }
