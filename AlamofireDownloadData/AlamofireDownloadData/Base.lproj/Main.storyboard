@@ -22,18 +22,39 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-vH-kJH">
                                 <rect key="frame" x="197" y="814" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dof-Zc-KTk">
+                                <rect key="frame" x="0.0" y="806" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZC8-uu-KLV">
+                                <rect key="frame" x="20" y="794" width="374" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zK6-vH-kJH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0HK-Ya-CEj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZC8-uu-KLV" secondAttribute="trailing" constant="20" id="LhY-It-slD"/>
+                            <constraint firstItem="Dof-Zc-KTk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PcM-5F-BSk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iru-nV-932" secondAttribute="trailing" id="Pth-t4-7Qg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dof-Zc-KTk" secondAttribute="trailing" id="UPT-rv-EPh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zK6-vH-kJH" secondAttribute="bottom" constant="28" id="eNr-Pb-Kav"/>
                             <constraint firstItem="Iru-nV-932" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kL6-Cd-YyP"/>
+                            <constraint firstItem="zK6-vH-kJH" firstAttribute="top" secondItem="Dof-Zc-KTk" secondAttribute="bottom" constant="8" symbolic="YES" id="pj3-zC-Upm"/>
+                            <constraint firstItem="Dof-Zc-KTk" firstAttribute="top" secondItem="ZC8-uu-KLV" secondAttribute="bottom" constant="8" symbolic="YES" id="ssl-ar-Yht"/>
+                            <constraint firstItem="ZC8-uu-KLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uHJ-ze-fzw"/>
                             <constraint firstItem="Iru-nV-932" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xgo-ab-2lq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Iru-nV-932" secondAttribute="bottom" id="xoi-4n-Vu4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="completedLabel" destination="Dof-Zc-KTk" id="JAC-8U-xZ6"/>
+                        <outlet property="imageView" destination="Iru-nV-932" id="DSG-Mz-z4S"/>
+                        <outlet property="indicator" destination="zK6-vH-kJH" id="Dz8-Ow-vHV"/>
+                        <outlet property="progressView" destination="ZC8-uu-KLV" id="vex-LK-grl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
