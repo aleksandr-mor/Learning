@@ -1,0 +1,6 @@
+framework module Pods_LocationSearch {
+  umbrella header "Pods-LocationSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}
