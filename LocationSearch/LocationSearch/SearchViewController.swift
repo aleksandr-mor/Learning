@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import CoreLocation
+
+protocol SearchViewControllerDelegate: AnyObject {
+    func searchViewController(_ vc: SearchViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?)
+}
 
 class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    weak var delegate: SearchViewControllerDelegate?
     
     private let label: UILabel = {
         let label = UILabel()
@@ -84,5 +91,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         tableView.deselectRow(at: indexPath, animated: true)
         //Notify map controller to show pin at selected place
         let coordinate = locations[indexPath.row].coordinates
+        
+        delegate?.searchViewController(self, didSelectLocationWith: coordinate)
     }
 }
