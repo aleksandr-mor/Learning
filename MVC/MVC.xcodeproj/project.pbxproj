@@ -14,7 +14,7 @@
 		47895347286E35AA00A36519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47895346286E35AA00A36519 /* Assets.xcassets */; };
 		4789534A286E35AA00A36519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47895348286E35AA00A36519 /* LaunchScreen.storyboard */; };
 		47895353286E35FB00A36519 /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895352286E35FB00A36519 /* ShopModel.swift */; };
-		47895356286E361C00A36519 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895355286E361C00A36519 /* ShopView.swift */; };
+		47911E4A286E3B4600830143 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47911E49286E3B4600830143 /* ShopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		47895349286E35AA00A36519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4789534B286E35AA00A36519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47895352286E35FB00A36519 /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
-		47895355286E361C00A36519 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		47911E49286E3B4600830143 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 		47895354286E360600A36519 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				47895355286E361C00A36519 /* ShopView.swift */,
+				47911E49286E3B4600830143 /* ShopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				47895343286E35A900A36519 /* Main.storyboard */,
-				47895346286E35AA00A36519 /* Assets.xcassets */,
 				47895348286E35AA00A36519 /* LaunchScreen.storyboard */,
+				47895346286E35AA00A36519 /* Assets.xcassets */,
 				4789534B286E35AA00A36519 /* Info.plist */,
 			);
 			path = Resources;
@@ -179,7 +179,7 @@
 				47895342286E35A900A36519 /* ShopController.swift in Sources */,
 				47895353286E35FB00A36519 /* ShopModel.swift in Sources */,
 				4789533E286E35A900A36519 /* AppDelegate.swift in Sources */,
-				47895356286E361C00A36519 /* ShopView.swift in Sources */,
+				47911E4A286E3B4600830143 /* ShopView.swift in Sources */,
 				47895340286E35A900A36519 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
