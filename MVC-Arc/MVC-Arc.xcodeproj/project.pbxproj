@@ -14,6 +14,7 @@
 		4779CEBB2870E0020064F5AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4779CEBA2870E0020064F5AF /* Assets.xcassets */; };
 		4779CEBE2870E0020064F5AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4779CEBC2870E0020064F5AF /* LaunchScreen.storyboard */; };
 		4779CECA2870E09C0064F5AF /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779CEC92870E09C0064F5AF /* Crypto.swift */; };
+		47A1BBE7287234C40057E42D /* RandomCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A1BBE6287234C40057E42D /* RandomCount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4779CEBD2870E0020064F5AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4779CEBF2870E0020064F5AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4779CEC92870E09C0064F5AF /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		47A1BBE6287234C40057E42D /* RandomCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		4779CEC52870E0220064F5AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				47A1BBE52872349E0057E42D /* Helpers */,
 				4779CEC92870E09C0064F5AF /* Crypto.swift */,
 			);
 			path = Model;
@@ -100,6 +103,14 @@
 				4779CEBC2870E0020064F5AF /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		47A1BBE52872349E0057E42D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				47A1BBE6287234C40057E42D /* RandomCount.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				4779CECA2870E09C0064F5AF /* Crypto.swift in Sources */,
 				4779CEB62870E0010064F5AF /* ViewController.swift in Sources */,
 				4779CEB22870E0010064F5AF /* AppDelegate.swift in Sources */,
+				47A1BBE7287234C40057E42D /* RandomCount.swift in Sources */,
 				4779CEB42870E0010064F5AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
