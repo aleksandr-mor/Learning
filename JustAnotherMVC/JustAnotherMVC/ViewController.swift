@@ -1,4 +1,4 @@
-//
+ //
 //  ViewController.swift
 //  JustAnotherMVC
 //
@@ -17,3 +17,16 @@ class ViewController: UIViewController {
 
 }
 
+struct Person {
+    let firstName: String
+    let lastName: String
+    let gender: String
+    let age: String
+    let weight: Double
+    let height: Double
+    let location: Location
+}
+
+struct Location {
+    let city: String
+}
