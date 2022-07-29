@@ -21,18 +21,18 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BMJ-aF-cRL">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kk-ai-28E">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTS-Ml-7kd">
                                 <rect key="frame" x="324" y="752" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="z73-Ce-SPJ"/>
-                                    <constraint firstAttribute="width" constant="60" id="zwD-ib-iEY"/>
+                                    <constraint firstAttribute="width" constant="60" id="QQx-1w-Z5G"/>
+                                    <constraint firstAttribute="height" constant="60" id="g9y-nH-p3D"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <imageReference key="image" image="location.circle" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="currentLocationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOQ-HA-Rea"/>
+                                    <action selector="userLocationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSr-Tw-iDG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,9 +41,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BMJ-aF-cRL" secondAttribute="trailing" id="B91-cg-aRR"/>
                             <constraint firstItem="BMJ-aF-cRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bbk-1c-pZl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cTS-Ml-7kd" secondAttribute="trailing" constant="30" id="DnT-dA-Yuu"/>
                             <constraint firstAttribute="bottom" secondItem="BMJ-aF-cRL" secondAttribute="bottom" id="R4k-rJ-E8f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3kk-ai-28E" secondAttribute="trailing" constant="30" id="lPt-MN-mPm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3kk-ai-28E" secondAttribute="bottom" constant="50" id="lm9-g2-FLY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cTS-Ml-7kd" secondAttribute="bottom" constant="50" id="fxw-5h-4Ao"/>
                             <constraint firstItem="BMJ-aF-cRL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zdK-Es-pCi"/>
                         </constraints>
                     </view>
