@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         pin.subtitle = "Free!"
         map.addAnnotation(pin)
     }
+    
     private func addChargerPin() {
         let pin = MKPointAnnotation()
         pin.coordinate = chargerCoordinate
@@ -61,7 +62,6 @@ class ViewController: UIViewController {
         annotationView?.image = UIImage(named: "charger")
         return annotationView
     }
-
 }
 
 extension ViewController : MKMapViewDelegate {

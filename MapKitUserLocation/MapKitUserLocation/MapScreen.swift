@@ -55,7 +55,7 @@ class MapScreen: UIViewController {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            // Show them alert letting them kmow what's up
+            // Show them alert letting them know what's up
             break
         case .authorizedAlways:
             break
