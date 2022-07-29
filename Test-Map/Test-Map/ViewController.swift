@@ -10,48 +10,53 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController {
-
-    let map = MKMapView()
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     //Coordinates of Dresden, Germany
     let carCoordinate = CLLocationCoordinate2D(latitude: 51.04, longitude: 13.737524)
     let chargerCoordinate = CLLocationCoordinate2D(latitude: 51.05, longitude: 13.737520)
     
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(map)
-        map.frame = view.bounds
-        map.setRegion(MKCoordinateRegion(center: carCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)), animated: false)
-        
-        map.delegate = self
-        
+        mapView.setRegion(MKCoordinateRegion(center: carCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)), animated: false)
+        mapView.delegate = self
         addFreeChargerPin()
         addChargerPin()
-        
+        self.locationManager.requestAlwaysAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+               locationManager.desiredAccuracy = kCLLocationAccuracyBest
+               locationManager.startUpdatingLocation()
+           }
     }
 
+    @IBAction func currentLocationButtonAction(_ sender: UIButton) {
+        let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+         let region = MKCoordinateRegion(center: locValue, span: span)
+         mapView.setRegion(region, animated: true)
+    }
+    
     private func addFreeChargerPin() {
         let pin = MKPointAnnotation()
         pin.coordinate = carCoordinate
-        pin.title = "Electric Charger"
-        pin.subtitle = "Free!"
-        map.addAnnotation(pin)
+        mapView.addAnnotation(pin)
     }
     
     private func addChargerPin() {
         let pin = MKPointAnnotation()
         pin.coordinate = chargerCoordinate
-        pin.title = "Electric Charger"
-        pin.subtitle = "30% Sale"
-        map.addAnnotation(pin)
+        mapView.addAnnotation(pin)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard !(annotation is MKUserLocation) else {
             return nil
         }
-        
-        var annotationView = map.dequeueReusableAnnotationView(withIdentifier: "custom")
+
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
         
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
@@ -64,9 +69,11 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController : MKMapViewDelegate {
+extension ViewController: MKMapViewDelegate {
 
        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
-          print("didSelectAnnotationTapped")
+           let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController
+           self.navigationController?.pushViewController(vc!, animated: true)
        }
 }
+
