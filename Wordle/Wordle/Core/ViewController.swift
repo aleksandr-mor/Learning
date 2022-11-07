@@ -13,7 +13,7 @@ import UIKit
 // Orange/Green
 
 class ViewController: UIViewController {
-
+    
     let keyboardVC = KeyboardViewController()
     let boardVC = BoardViewController()
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemGray6
         addChildren()
     }
-
+    
     private func addChildren() {
         addChild(keyboardVC)
         keyboardVC.didMove(toParent: self)
@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         
         addConstraints()
     }
+    
     func addConstraints() {
         NSLayoutConstraint.activate([
             boardVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
