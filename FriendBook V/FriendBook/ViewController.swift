@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 }
 
 //MARK:- UITableViewDataSource
-extension ViewController : UITableViewDataSource {
+extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friendDataArray.count
